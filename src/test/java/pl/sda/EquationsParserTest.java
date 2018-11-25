@@ -50,4 +50,31 @@ public class EquationsParserTest {
         //then
         Assert.assertEquals(expectedEquation, result);
     }
+
+    @Test
+    public void shouldParseEquationxPlus6Eq100() {
+        //given
+        final String equation = "x+6=100";
+        final Equation expectedEquation = new Equation(1, 6, 100);
+
+        //when
+        Equation result = equationsParser.parse(equation);
+
+        //then
+        Assert.assertEquals(expectedEquation, result);
+    }
+
+
+    @Test
+    public void shouldParseEquationMinusXPlus6Eq100() {
+        //given
+        final String equation = "-x+6=100";
+        final Equation expectedEquation = new Equation(-1, 6, 100);
+
+        //when
+        Equation result = equationsParser.parse(equation);
+
+        //then
+        Assert.assertEquals(expectedEquation, result);
+    }
 }

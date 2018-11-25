@@ -1,7 +1,5 @@
 package pl.sda;
 
-import java.util.Objects;
-
 public class Equation {
     private double a;
     private double b;
