@@ -27,6 +27,15 @@ public class EquationsParser {
     }
 
     private double parseA(String leftSide) {
+        //boolean isNull = leftSide != null ? false: true;
+
+        //boolean isNull;
+        //if (leftSide != null) {
+        //     isNull = false
+        // } else {
+        //    isNull = true;
+        // }
+
         return Double.parseDouble(leftSide.contains("-") ? "-1" : leftSide.isEmpty() ? "1" : leftSide);
     }
 }
