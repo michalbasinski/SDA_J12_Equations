@@ -20,7 +20,33 @@ public class EquationsParserTest {
 
         //when
         Equation result = equationsParser.parse(equation);
-        
+
+        //then
+        Assert.assertEquals(expectedEquation, result);
+    }
+
+    @Test
+    public void shouldParseEquation5xEq100() {
+        //given
+        final String equation = "5x=100";
+        final Equation expectedEquation = new Equation(5, 0, 100);
+
+        //when
+        Equation result = equationsParser.parse(equation);
+
+        //then
+        Assert.assertEquals(expectedEquation, result);
+    }
+
+    @Test
+    public void shouldParseEquation6Eq100() {
+        //given
+        final String equation = "5=100";
+        final Equation expectedEquation = new Equation(0, 5, 100);
+
+        //when
+        Equation result = equationsParser.parse(equation);
+
         //then
         Assert.assertEquals(expectedEquation, result);
     }

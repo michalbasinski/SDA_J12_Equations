@@ -1,5 +1,7 @@
 package pl.sda;
 
+import java.util.Objects;
+
 public class Equation {
     private double a;
     private double b;
@@ -21,5 +23,11 @@ public class Equation {
 
     public double getC() {
         return c;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        Equation equation = (Equation) o;
+        return a == equation.getA() && b == equation.getB() && c == equation.getC();
     }
 }
