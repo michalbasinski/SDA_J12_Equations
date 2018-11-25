@@ -59,4 +59,19 @@ public class EquationsSolverTest {
             Assert.assertTrue(e instanceof IncorrectEquationException);
         }
     }
+
+    @Test
+    public void shouldReturn6IfEquationIs6xEquals36() {
+        //given
+        final double a = 6;
+        final double b = 0;
+        final double c = 36;
+        final double expectedResult = 6;
+
+        //when
+        double result = equationsSolver.solve(a,b,c);
+
+        //then
+        Assert.assertEquals(expectedResult, result, 0.001);
+    }
 }
